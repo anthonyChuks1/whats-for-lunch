@@ -16,12 +16,21 @@
 const whatToDoForLunch = function(hungry, availableTime) {
  // console.log("I don't know what to do!");
   if(hungry){
-    console.log("I'm hungry and I have" , availableTime, "minutes for lunch." );
-    console.log("Get something to drink or eat!");
+
+    if(availableTime <= 50){
+      console.log("I'm hungry and I have" , availableTime, "minutes for lunch." );
+      if(availableTime <= 20){
+        console.log("Pick something up and eat!.");
+      }
+      else if(availableTime <= 30){
+        console.log("Head over to a food shop and get something to eat!");
+      }
+      else console.log("Remember, we are in a bootcamp, \nWe should reconsider how much time we have to spare.");
+    }
   }
   else {
     console.log("I'm not hungry and I have" , availableTime, "minutes for lunch." );
-    console.log("Relax, Prepare for next round!");
+    console.log("We can go back to work.");
   }
 }
 
